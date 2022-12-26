@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Viaoda+Libre&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+
+body {
+  background-color: #f2f2f2;
+}
+.wrapper {
+  width: 1400px;
+  margin: 0 auto;
+  .wrapper__body {
+    margin: 0 auto;
+    width: 1200px;
+    margin-top: 32px;
+    .body__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .header__links {
+        display: flex;
+        .links__lk {
+          margin-right: 30px;
+          cursor: pointer;
+        }
+        .links__basket {
+          cursor: pointer;
+        }
+      }
+    }
+    .body__main {
+      margin-top: 85px;
+      .main__header {
+        width: 662px;
+        margin: 0 auto;
+        font-family: "Viaoda Libre";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #1c261b;
+      }
+      .main__info {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 408px;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #576161;
+      }
+      .main__catalog {
+        margin: 0 auto;
+        .catalog__link {
+          margin-top: 60px;
+          padding-top: 139px;
+          width: 1242px;
+          height: 322px;
+          background-image: url(/img/catalog__link.png);
+          font-family: "Viaoda Libre";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: #f2f2f2;
+        }
+      }
+      .main__hits {
+        position: relative;
+        left: -20px;
+        width: 1290px;
+        .hits__header {
+          margin-top: 120px;
+          font-family: "Manrope";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.03em;
+          color: #1c261b;
+        }
+
+        .hits__body {
+          margin-top: 60px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .hits__item {
+            cursor: pointer;
+            .hits__img {
+              img {
+                width: 300px;
+              }
+            }
+            .hits__name {
+              width: 281px;
+              font-family: "Viaoda Libre";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 140%;
+              text-align: center;
+              letter-spacing: 0.03em;
+              color: #1c261b;
+            }
+            .hits__price {
+              font-family: "Manrope";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 140%;
+              text-align: center;
+              color: #1c261b;
+            }
+          }
+        }
+      }
+      .body__gemoroy {
+        margin: 0 auto;
+        margin-top: 120px;
+        width: 100%;
+        .gemoroy__toch,
+        .gemoroy__hcot {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .gemoroy__text {
+          font-family: "Viaoda Libre";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: #1c261b;
+          margin-top: 60px;
+          margin-bottom: 60px;
+        }
+      }
+
+      .main__catalog:last-child {
+      }
+
+      #catalog {
+        background-image: url(/img/catalog__link2.png);
+      }
+    }
+  }
+}
+
+.popup {
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.8s ease 0s;
+
+  .popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 320 10px;
+
+    .popup_content {
+      border: 1px solid #000;
+      background-color: rgb(228, 228, 228);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      width: 800px;
+      height: 685px;
+      transition: all 0.8s ease 0s;
+      opacity: 0;
+      transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+
+      .popup_letter {
+        width: 100%;
+        height: 80px;
+      }
+
+      .popup_title {
+        margin-top: 15px;
+        font-size: 35px;
+        width: 600px;
+        height: 55px;
+        color: #000;
+        line-height: 58.51px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .popup_input {
+        background-color: rgb(228, 228, 228);
+        width: 415px;
+        height: 35px;
+        margin-left: 193px;
+        border-bottom: 1px solid #f4f4f4;
+        color: #000;
+        line-height: 24.38px;
+        font-size: 20px;
+        display: block;
+      }
+
+      .popup_input:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      .popup_login {
+        margin-top: 45px;
+      }
+
+      .popup_password {
+      }
+
+      .popup_button {
+        display: block;
+        background-color: #000;
+        width: 415px;
+        height: 60px;
+        margin-left: 192px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        margin-top: 45px;
+        color: #fff;
+        font-size: 24px;
+        line-height: 29.26px;
+        margin-bottom: 17px;
+      }
+
+      .popup_button:hover {
+        background-color: rgb(228, 228, 228);
+        color: #000;
+        border: 2px solid #000;
+      }
+
+      .popup_registration {
+        height: 45px;
+        width: 250px;
+        font-size: 20px;
+        color: #ff4242;
+        text-align: center;
+        line-height: 24.38px;
+      }
+
+      .popup_terms {
+        width: 430px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: #000;
+        font-size: 20px;
+        line-height: 24.38px;
+        position: relative;
+        top: 86px;
+
+        a {
+          color: #ff4242;
+        }
+      }
+
+      .last {
+        width: 430px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: #000;
+        font-size: 20px;
+        line-height: 24.38px;
+        position: static;
+
+        a {
+          color: #ff4242;
+        }
+      }
+
+      #error {
+        color: red;
+        font-size: 20px;
+        line-height: 24px;
+        width: 500px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        visibility: hidden;
+      }
+
+      .popup_name {
+        margin-top: 47px;
+      }
+
+      .popup_email {
+      }
+    }
+  }
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+
+  .popup_content {
+    transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.close__body {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: 0;
+  img {
+  }
+}
+
+.item__main {
+  margin-top: 70px;
+  display: flex;
+  .item__main-body {
+    width: 540px;
+    margin-left: 60px;
+    .main-body__name {
+      font-family: "Viaoda Libre";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 140%;
+      letter-spacing: 0.03em;
+      color: #1c261b;
+      margin-bottom: 30px;
+    }
+    .main-body__price {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0.03em;
+      color: #1c261b;
+      margin-bottom: 60px;
+    }
+    .main-body__count {
+      display: flex;
+      .count {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #1c261b;
+        margin-right: 60px;
+      }
+      .count__choice {
+        display: flex;
+        align-items: center;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          /* display: none; <- Crashes Chrome on hover */
+          -webkit-appearance: none;
+          margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+        }
+        .minus,
+        .plus {
+          cursor: pointer;
+          border: 1px solid #000;
+          width: 20px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+        }
+        .item__input {
+          border-top: 1px solid #000;
+          border-bottom: 1px solid #000;
+          width: 60px;
+          height: 30px;
+          text-align: center;
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+  img {
+    width: 500px;
+  }
+}
+
+.main-body__buy {
+  margin-top: 30px;
+  width: 160px;
+  height: 50px;
+  background-color: #fff;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #f2f2f2;
+  background: #80aa92;
+  border-radius: 40px;
+}
+
+.profile__header {
+  margin-top: 73px;
+  font-family: "Viaoda Libre";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c261b;
+  width: 241px;
+}
+
+.profile__link {
+  margin-top: 10px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #80aa92;
+}
+
+.profile__main {
+  display: flex;
+}
+
+.main__history {
+  margin-right: 120px;
+  width: 560px;
+}
+.main__user-info {
+  width: 360px;
+  .user-info__header {
+    margin-top: 60px;
+    width: 278px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #1c261b;
+  }
+
+  .user-info__info {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #1c261b;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000;
+  }
+
+  .name {
+    margin-top: 64px;
+  }
+  .email {
+    margin-top: 30px;
+  }
+}
+
+.history__header {
+  margin-top: 60px;
+  width: 195px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  color: #1c261b;
+}
+
+.history__body {
+  .error {
+    height: 260px;
+    margin-top: 30px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #1c261b;
+  }
+}
+
+.history__item {
+  display: flex;
+  margin-top: 60px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 580px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .history__img {
+    margin-right: 60px;
+    img {
+      width: 200px;
+    }
+  }
+
+  .history__name {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1c261b;
+  }
+
+  .history__count {
+    margin-top: 10px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c261b;
+  }
+
+  .history__price {
+    margin-top: 30px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1c261b;
+  }
+  .delete_history {
+    margin-top: 30px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #80aa92;
+  }
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 50px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #f2f2f2;
+  background: #80aa92;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: 0em;
+}
+
+.filter {
+  width: 200px;
+}
+
+.material {
+  margin-top: 20px;
+}
+.catalog__header {
+  width: 145px;
+  margin-top: 73px;
+  font-family: "Viaoda Libre";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #1c261b;
+}
+
+.catalog__filters {
+  width: 200px;
+  margin-right: 60px;
+}
+.catalog__main {
+  display: flex;
+  margin-top: 60px;
+  .filter__header {
+    width: 123px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #80aa92;
+  }
+  .filter__body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 17px;
+    .filter__checkbox {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: 10px;
+      }
+    }
+  }
+  .filter__body:not(:last-child) {
+    border-bottom: 1px solid #576161;
+  }
+}
+
+.search {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    #f2f2f2;
+  border-radius: 40px;
+  width: 330px;
+  height: 35px;
+  padding-left: 11px;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway";
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.08em;
+
+  color: #576161;
+
+  opacity: 0.6;
+}
+
+.catalog__search {
+  display: flex;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    #f2f2f2;
+  border-radius: 40px;
+  width: 330px;
+  height: 35px;
+  padding-left: 11px;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway";
+}
+
+.catalog__products {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.item {
+  width: 281px;
+  height: 380px;
+
+  .item__img {
+    img {
+      width: 260px;
+      height: 260px;
+    }
+  }
+  .item__name {
+    width: 281px;
+    font-family: "Viaoda Libre";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #1c261b;
+  }
+
+  .item__price {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #1c261b;
+  }
+}
+
+#search_error {
+  display: none;
+}
+
+.basket__item {
+  margin-top: 60px;
+  height: 320px;
+  border-top: 1px solid #1c261b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .basket__img {
+    img {
+      width: 260px;
+    }
+  }
+  .basket__name {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #1c261b;
+  }
+
+  .basket__count{
+    display: flex;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+          /* display: none; <- Crashes Chrome on hover */
+          -webkit-appearance: none;
+          margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input{
+      text-align: center;
+      width: 70px;
+      background: none;
+      font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 140%;
+/* identical to box height, or 34px */
+
+
+/* h1 */
+
+color: #1C261B;
+      
+    }
+
+    .minus, .plus{
+      width: 25px;
+      height: 25px;
+      border: 1px solid #1C261B;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    
+  }
+
+  .basket__price {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #1c261b;
+  }
+}
+
+.basket__buy{
+  background: #80AA92;
+border-radius: 40px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 140%;
+/* identical to box height, or 34px */
+
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #F2F2F2;
+width: 260px;
+height: 50px;
+margin-left: 940px;
+
+}
+
+td{
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+
+/* h1 */
+
+color: #1C261B;
+
+}
+
+TABLE{
+  width: 1000px; /* Ширина таблицы */
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+  border: 2px solid #f2f2f2; /* Прячем рамку вокруг таблицы */
+  input{
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+ }
+ TD, TH {
+  padding: 3px; /* Поля вокруг содержимого таблицы */
+  border: 1px solid #999999; /* Параметры рамки */
+  text-align: left; /* Выравнивание по левому краю */
+ }
